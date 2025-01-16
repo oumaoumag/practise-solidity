@@ -74,6 +74,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "checkBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -203,11 +222,11 @@
 	},
 	"sources": {
 		"Simple-Token-Contract/SimpleToken.sol": {
-			"keccak256": "0xcda4a3e4290865fa876d1d35172354e7f9495fb51b2464281f66f63dcc545ee1",
+			"keccak256": "0x02601c502f22440926ef43735497e198f1d2c7e4bd7e745324f2668bd85716d1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f9ba1f12aaf06a36217b4c1a6ff7c2d2189a72c648ab6e4f437b77cefef217a4",
-				"dweb:/ipfs/QmbU6YjMFVakPxZyCGy5BRU4bY31WP42nRFDozQKVDztEW"
+				"bzz-raw://a971bc420e40a70e504c1ccd6129f9e6513dd6f6a519244548b854504c066b3c",
+				"dweb:/ipfs/QmR3dXtox2dQa3G8ZSjF23xWmPAqo3TN6e5JgxcnjmyiLd"
 			]
 		}
 	},

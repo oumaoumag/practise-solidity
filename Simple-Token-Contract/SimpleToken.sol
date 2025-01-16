@@ -36,5 +36,10 @@ contract SimpleToken {
         balanceOf[msg.sender] -= amount;
         balanceOf[to] += amount;
         emit Transfer(msg.sender, to, amount);
+    } 
+
+        // Function to check the balance of any address
+    function checkBalance(address account) external  view returns (uint256) {
+        return balanceOf[account];
     }
 }
