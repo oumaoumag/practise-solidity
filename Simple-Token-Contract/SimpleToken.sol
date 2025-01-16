@@ -1,25 +1,30 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SimpleToken {
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SimpleToken  is Ownable {
     string public name = "SimpleToken";
     string public symbol = "STK";
     uint8 public decimals = 18;
     uint256 public totalSupply;
 
     mapping(address => uint256) public balanceOf;
-    address public owner;
+    mapping(address => mapping(address => uint256)) public allowance;
+    // address public owner;
 
     event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed  spender,  uint256 value);
     event Mint(address indexed to, uint256 value);
+    event Burn(address indexed from, uint256 value);
 
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only the owner can perform");
-        _;
-    }
+    // modifier onlyOwner() {
+    //     require(msg.sender == owner, "Only the owner can perform");
+    //     _;
+    // }
 
-    constructor() {
-        owner = msg.sender; // Set the contract deployer as the owner
+    constructor() Ownable(msg.sender) {
+       //  Constructor initializes the Ownable contract with the deployer's address
     }
 
     function mint(address to, uint256 amount) external onlyOwner {
