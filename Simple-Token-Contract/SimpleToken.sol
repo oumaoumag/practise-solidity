@@ -18,5 +18,23 @@ contract SimpleToken {
         _;
     }
 
-    constr
+    constructor() {
+        owner = msg.sender; // Set the contract deployer as the owner
+    }
+
+    function mint(address to, uint256 amount) external onlyOwner {
+        require(to != address(0), "Cannot mint to the zero address");
+        totalSupply += amount;
+        balanceOf[to] += amount;
+        emit Mint(to, amount);
+    }
+
+    function transfer(address to, uint256 amount) external {
+        require(balanceOf[msg.sender] >= amount, "Insufficient balance");
+        require(to != address(0), "Cannot transfer to the zero address");
+
+        balanceOf[msg.sender] -= amount;
+        balanceOf[to] += amount;
+        emit Transfer(msg.sender, to, amount);
+    }
 }
