@@ -1,0 +1,350 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "farmer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					}
+				],
+				"name": "ProductRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newQuantity",
+						"type": "uint256"
+					}
+				],
+				"name": "ProductUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "farmerProducts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					}
+				],
+				"name": "getFarmerProducts",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					}
+				],
+				"name": "getProductDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "productId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "farmer",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "qualityCertifications",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "batchInformation",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "registrationTimestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ProductRegistration.Product",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "products",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "qualityCertifications",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "batchInformation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "registrationTimestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_qualityCertifications",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_batchInformation",
+						"type": "string"
+					}
+				],
+				"name": "registerProduct",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newQuantity",
+						"type": "uint256"
+					}
+				],
+				"name": "updateProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getFarmerProducts(address)": {
+					"details": "Retrieves all product IDs registered by a specific farmer",
+					"params": {
+						"_farmer": "Address of the farmer"
+					},
+					"returns": {
+						"_0": "Array of product IDs"
+					}
+				},
+				"getProductDetails(uint256)": {
+					"details": "Retrieves details of a specific product",
+					"params": {
+						"_productId": "Unique identifier of the product"
+					},
+					"returns": {
+						"_0": "Product details"
+					}
+				},
+				"registerProduct(string,uint256,uint256,string,string)": {
+					"details": "Registers a new dairy product on the blockchain",
+					"params": {
+						"_batchInformation": "Batch-specific information",
+						"_name": "Name of the product",
+						"_price": "Price of the product",
+						"_qualityCertifications": "Quality certifications for the product",
+						"_quantity": "Initial quantity of the product"
+					},
+					"returns": {
+						"_0": "productId Unique identifier for the registered product"
+					}
+				},
+				"updateProduct(uint256,uint256)": {
+					"details": "Updates the quantity of an existing product",
+					"params": {
+						"_newQuantity": "Updated quantity of the product",
+						"_productId": "Unique identifier of the product"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ProductRegistration.sol": "ProductRegistration"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ProductRegistration.sol": {
+			"keccak256": "0x3dfbb0efda8fdb42b6ba7dc903d354856c5330495d9e0564a5d991cd72dd04e2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e9f0fda8d3045bd30ae1bd638bcaefdaee5db969fc9c898d45e409caafcb703",
+				"dweb:/ipfs/QmYUhyi5RyMvbwvLHAynyaXMRK4MKvycRKMA2gKWskDx5x"
+			]
+		}
+	},
+	"version": 1
+}
