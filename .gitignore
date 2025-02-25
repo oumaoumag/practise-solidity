@@ -66,3 +66,6 @@ Thumbs.db
 
 # Other temporary files
 tmp/
+
+.states/vm-cancun
+.deps/
