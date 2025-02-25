@@ -12,3 +12,57 @@ modern.jsonp
 resources/sass/.sass-cache/
 resources/.arch-internal-preview.css
 .arch-internal-preview.css
+
+# Node modules (if your project uses Node for tooling)
+node_modules/
+
+# Environment variable files
+.env
+.env.*
+
+####################################
+# Hardhat
+####################################
+# Hardhat build artifacts and cache
+artifacts/
+cache/
+
+####################################
+# Truffle
+####################################
+# Truffle build folder
+build/
+# Optional: Truffle-specific folders or logs (if any)
+.truffle/
+
+####################################
+# Foundry
+####################################
+# Foundry build output and cache
+out/
+cache/
+# Optional: remappings file if generated automatically
+remappings.txt
+
+####################################
+# Coverage Reports
+####################################
+coverage/
+
+####################################
+# Editor & OS Specific Files
+####################################
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Visual Studio Code settings (if not shared)
+.vscode/
+
+# Log files
+*.log
+
+# Other temporary files
+tmp/
