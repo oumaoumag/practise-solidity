@@ -19,7 +19,7 @@ contract bokk {
 
     function add_book(uint bookID) public {
         // this will find the book given the owner
-        owned_book[address(0x123)] = bookID
+        owned_book[address(0x123)] = bookID;
     }
  }
 
