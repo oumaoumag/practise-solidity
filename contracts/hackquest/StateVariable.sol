@@ -10,7 +10,7 @@ contract ContractName {
     // This is a state variable
     int a;
 
-    function add(int b) returns(int) {
+    function add(int b) public returns(int) {
         // b is defined as a parameter, so it's not a state variable
         // c is defined inside in a function, so it's  also not a state variable
         int c = a + b;
