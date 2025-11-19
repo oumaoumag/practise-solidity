@@ -5,7 +5,7 @@
 // We use '=' to assign the new value to it.
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.0;
 
 contract LearningStrings {
     string car = "BMW";
@@ -18,3 +18,5 @@ contract LearningStrings {
     }
 
 }
+
+// 'String' is reference type in Solidity and is mutabke, meaning its length and content can be modified after initialization
