@@ -3,7 +3,7 @@
 // 2. Reference Types - Variables that store a reference to the data's location, like mapping.
 
 // SPDX-License-Identifier: mit
-pragma solidity ^0.8,0;
+pragma solidity ^0.8.0;
 
 contract Example {
     mapping(int256 => address) ap;
