@@ -20,3 +20,16 @@ contract LearningStrings {
 }
 
 // 'String' is reference type in Solidity and is mutabke, meaning its length and content can be modified after initialization
+// 'Strig concatenation' is the process of combining two or more strings into a single string.
+// To concatenate a string we can use the 'concat()' method.
+contract StringExample {
+    string public greeting = "Hello, ";
+    string public name = "Alice";
+
+    string result  = string.concat(greeting, name);
+
+    string public message;
+    function setMessage() public {
+        message = string.concat("Hello, ", name);
+    }
+}
