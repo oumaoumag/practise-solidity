@@ -14,7 +14,7 @@ contract Example {
         a = 2; // a is updated, but stays the same
         b = 4; // b is updated, but a stays the same
 
-        map[1] = address(0x123)
+        map[1] = address(0x123);
     }
 }
 
