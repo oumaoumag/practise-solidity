@@ -46,3 +46,25 @@ NFT[] myNFT;
 // The function then initializaes a new dynamic array `batchBalalnceof`, of the smae length.
 // It iterates through each account and token ID in the input arrays and fills the `
 
+// PUSH & POP METHODs
+// This is a build-in method in function in Solidity tgat allows you to append an element to the end of the dynamic arrays. effectively increasing its length by one.
+// This pop method is also a build-in function in solidity that allows you to remove the last element from a dynamic array, effectively reducing its length by one. 
+// You can use the pop method to remove the last value from an array.
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract ArraysPushAndPopExample {
+    uint[] uintArr;
+
+    function addElement(uint newValue) public {
+        uintArr.push(newValue);
+    }
+
+    function removeElement() public {
+        uintArr.pop();
+    }
+}
+
+// Length Method
+// The 
+
