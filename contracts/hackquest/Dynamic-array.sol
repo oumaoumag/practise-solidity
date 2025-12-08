@@ -14,7 +14,7 @@
 // Batch Balances Querying:
 // In the ERC1155 contract code, one of the functions is 'balanceOfBatch, which retrieves the balances of multiple accounts. 
 // The function takes two dynamic arrays as input, 'address[] memory accounts and uint256[] memory ids, and returns a dynamic array uint256[] memory batch Balances.
-/ SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract ERC11555 {
@@ -66,5 +66,22 @@ contract ArraysPushAndPopExample {
 }
 
 // Length Method
-// The 
+// The length property allows developers to check the number of elements currently stored in an array.
+uint lenghth = uintArr.length;
 
+// Accessing Elements
+// Accessing an array elements means retrieving the value stored at a specific index in the array.
+// You can access a specific element in an array by writing thhe array's name followed by the index in square brackets([]).
+// arrayName[index]
+uint value = uintArr[0];
+ contract ArraysAccessExample {
+    uint[] uintArr;
+
+    function addElement(uint newValue) public {
+        uintArr.push(newValue);
+    }
+
+    function getFirstElement() public  view returns (uint) {
+        return uintArr[0];
+    }
+ }
